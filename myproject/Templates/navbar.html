@@ -1,0 +1,59 @@
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #e9ecef; /* Light gray background */
+    margin: 0;
+}
+
+ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center the menu */
+    background-color: #343a40; /* Dark background for the navbar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+li {
+    margin: 0 15px; /* Spacing between items */
+}
+
+a {
+    display: block;
+    padding: 14px 20px; /* Padding for links */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+a:hover {
+    background-color: #495057; /* Darker background on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.active {
+    background-color: #28a745; /* Green for active link */
+    border-radius: 5px; /* Match rounded corners */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    ul {
+        flex-direction: column; /* Stack items vertically */
+    }
+    li {
+        margin: 10px 0; /* Vertical spacing */
+    }
+}
+
+</style>
+
+<ul>
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href=" {% url 'logoutPage' %} ">Logout</a></li>
+  </ul>
